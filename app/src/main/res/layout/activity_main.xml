@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+
+    tools:viewBindingIgnore="true">
+
+    <Chronometer
+        android:id="@+id/stopwatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00.00.00"
+        android:padding="18dp"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:background="@drawable/coustom_chrono"
+        android:textStyle="bold">
+
+    </Chronometer>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:padding="18dp">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/custom_button"
+            android:text="Start"
+            app:icon="@drawable/ic_baseline_play_circle_filled_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnstop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/custom_button"
+            android:text="Stop"
+            app:icon="@drawable/ic_baseline_stop_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnreset" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/custom_button"
+            android:text="Reset"
+            app:icon="@drawable/ic_baseline_replay_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnstart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
